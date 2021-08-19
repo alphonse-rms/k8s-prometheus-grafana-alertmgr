@@ -1,0 +1,24 @@
+kind: ConfigMap
+apiVersion: v1
+metadata:
+  name: alertmanager-config
+  namespace: monitoring
+data:
+  config.yml: |-
+    global:
+    templates:
+    - '/etc/alertmanager-templates/*.tmpl'
+    route:
+      receiver: alert-emailer
+      group_by: ['alertname', 'priority']
+      group_wait: 10s
+      repeat_interval: 30m
+    receivers:
+    - name: alert-emailer
+      email_configs:
+      - to: $MAIL_DEST
+        from: $GMAIL_ACCOUNT
+        smarthost: smtp.gmail.com:587
+        auth_username: "$GMAIL_ACCOUNT"
+        auth_identity: "$GMAIL_ACCOUNT"
+        auth_password: $GMAIL_APP_PASSWORD
