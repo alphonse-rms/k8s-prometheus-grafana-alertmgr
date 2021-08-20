@@ -10,7 +10,7 @@
 
 - Prometheus : prom/prometheus:v2.29.1
 - Alert Manager: prom/alertmanager:v0.19.0
-- Grafana: grafana/grafana:latest
+- Grafana: grafana/grafana:8.1.2
 - Kube State Metrics: k8s.gcr.io/kube-state-metrics/kube-state-metrics:v2.1.1
 
 ## Notes:
@@ -80,6 +80,6 @@ By default, Prometheus, Grafana and AlertManager services are reachable by servi
 
 You can edit each service manifest to change them.
 
-- Prometheus: *:30800
-- Alert Manager: *:31000
-- Grafana: *:32000
+- Prometheus: *:30800 / prometheus.k8s-vm.com
+- Alert Manager: *:31000 / alertmgr.k8s-vm.com
+- Grafana: *:32000 / grafana.k8s-vm.com
