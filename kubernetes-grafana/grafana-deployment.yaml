@@ -10,7 +10,6 @@ spec:
       app: grafana
   template:
     metadata:
-      name: grafana
       labels:
         app: grafana
     spec:

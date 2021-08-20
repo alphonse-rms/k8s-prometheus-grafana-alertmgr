@@ -20,7 +20,7 @@ spec:
         args:
           - "--config.file=/etc/alertmanager/config.yml"
           - "--storage.path=/alertmanager"
-          - "--cluster.listen-address=0.0.0.0:9093"
+          #- "--cluster.listen-address=0.0.0.0:9093"
         ports:
         - name: alertmanager
           containerPort: 9093

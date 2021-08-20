@@ -16,7 +16,7 @@ spec:
               service:
                 name: prometheus
                 port:
-                  number: 8080
+                  number: 9090
   tls:
     - hosts:
         - prometheus.k8s-vm.com
