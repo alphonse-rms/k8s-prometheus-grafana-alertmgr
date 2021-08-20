@@ -27,6 +27,10 @@
 
 `cd k8s-prometheus-grafana-alertmgr`
 
+### Create the Namespace
+
+`kubectl create ns monitoring`
+
 ### Install Kube State Metrics first
 
 `kubectl apply -f kube-state-metrics/`
